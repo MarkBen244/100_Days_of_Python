@@ -1,0 +1,52 @@
+import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+           'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+symbols = ['!', '@', '#', '$', '%']
+
+print("Welcome to the PyPassword Generator!")
+nr_letters = int(input("How mant letters do you want in your password?\n"))
+nr_numbers = int(input("How many numbers would you like?\n"))
+nr_symbols = int(input("How many symbols would you like?\n"))
+
+# Easy mode
+
+# password = ""
+# for i in range(1, nr_letters+1):
+#     randon_char = random.choice(letters)
+#     password += randon_char
+
+# for i in range(1, nr_numbers+1):
+#     randon_num = random.choice(numbers)
+#     password += randon_num
+
+# for i in range(1, nr_symbols+1):
+#     randon_sym = random.choice(symbols)
+#     password += randon_sym
+
+# print(password)
+
+
+# Hard Mode 1
+
+password = ""
+for i in range(1, nr_letters+1):
+    randon_char = random.choice(letters)
+    password += randon_char
+
+for i in range(1, nr_numbers+1):
+    randon_num = random.choice(numbers)
+    password += randon_num
+
+for i in range(1, nr_symbols+1):
+    randon_sym = random.choice(symbols)
+    password += randon_sym
+
+print(password)
+
+re_password = list(password)
+random.shuffle(re_password)
+shuffled = "".join(re_password)
+print("Your generated password is:\n", shuffled)
