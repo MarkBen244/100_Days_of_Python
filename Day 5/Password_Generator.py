@@ -31,22 +31,38 @@ nr_symbols = int(input("How many symbols would you like?\n"))
 
 # Hard Mode 1
 
+# password = ""
+# for i in range(1, nr_letters+1):
+#     randon_char = random.choice(letters)
+#     password += randon_char
+
+# for i in range(1, nr_numbers+1):
+#     randon_num = random.choice(numbers)
+#     password += randon_num
+
+# for i in range(1, nr_symbols+1):
+#     randon_sym = random.choice(symbols)
+#     password += randon_sym
+
+# print(password)
+
+# re_password = list(password)
+# random.shuffle(re_password)
+# shuffled = "".join(re_password)
+# print("Your generated password is:\n", shuffled)
+
+
+password_list = []
+for i in range(0, nr_letters):
+    password_list.append(random.choice(letters))
+for i in range(0, nr_symbols):
+    password_list.append(random.choice(symbols))
+for i in range(0, nr_numbers):
+    password_list.append(random.choice(numbers))
+
+random.shuffle(password_list)
+
 password = ""
-for i in range(1, nr_letters+1):
-    randon_char = random.choice(letters)
-    password += randon_char
-
-for i in range(1, nr_numbers+1):
-    randon_num = random.choice(numbers)
-    password += randon_num
-
-for i in range(1, nr_symbols+1):
-    randon_sym = random.choice(symbols)
-    password += randon_sym
-
-print(password)
-
-re_password = list(password)
-random.shuffle(re_password)
-shuffled = "".join(re_password)
-print("Your generated password is:\n", shuffled)
+for i in password_list:
+    password += i
+print("Your password is:\n", password)
