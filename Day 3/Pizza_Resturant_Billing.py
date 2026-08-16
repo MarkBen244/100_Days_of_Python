@@ -1,3 +1,6 @@
+# This is another project I had done as i wa learming about conditional statements
+# This shows the bill of your pizza depending on the size and toppings you want
+
 print("Welcome to Mark Pizza Continentals\nMake your oder below:")
 bill = 0
 size = input("What size of pizza do you want? S, M or L:\n")

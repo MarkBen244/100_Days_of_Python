@@ -1,3 +1,4 @@
+# This is a Rock Paper Scissors game. the user picks an option and the robot picks a random option.
 import random
 print("Welcoe to the Marks Rock Paper Scissors Game")
 players_pick = int(
@@ -6,7 +7,7 @@ weapon = 0
 bot_weapon = 0
 if players_pick == 0:
     weapon = "Rock"
-    print("You choose Rock")
+    print("YOU CHOOSE: Rock")
     bot = random.randint(0, 2)
     if bot == 0:
         bot_weapon = "Rock"
@@ -25,7 +26,7 @@ if players_pick == 0:
         print("Robot Choose Rock:\nIts a Draw")
 elif players_pick == 1:
     weapon = "Paper"
-    print("You choose Paper")
+    print("YOU CHOOSE: Paper")
     bot = random.randint(0, 2)
     if bot == 0:
         bot_weapon = "Rock"
@@ -44,7 +45,7 @@ elif players_pick == 1:
         print("Robot Choose Rock:\nYou win")
 elif players_pick == 2:
     weapon = "Scissors"
-    print("You choose Scissors")
+    print("YOU CHOOSE: Scissors")
     bot = random.randint(0, 2)
     if bot == 0:
         bot_weapon = "Rock"
