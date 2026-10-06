@@ -1,4 +1,5 @@
 sample.txt
 True.py
 Black_Jack_2nd.py
-_pycache_
+__pycache__/
+*.pyc
