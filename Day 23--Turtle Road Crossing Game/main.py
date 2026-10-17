@@ -49,7 +49,7 @@ while game_is_on:
             screen.update()
             break
 
-    # Check whether the player reached the finish line
+    # Check whether the player has reached the finished line
     if game_is_on and player.ycor() >= FINISH_LINE_Y:
         player.finish_line()
         car_manager.level_up()
