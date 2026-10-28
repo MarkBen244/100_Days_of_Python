@@ -1,14 +1,32 @@
+
+from pathlib import Path
+
 PLACEHOLDER = "[name]"
 
+BASE_DIR = Path(__file__).resolve().parent
 
-with open("./Input/Names/invited_names.txt")as name_file:
+names_path = BASE_DIR / "Input" / "Names" / "invited_names.txt"
+letter_path = BASE_DIR / "Input" / "Letters" / "starting_letter.txt"
+output_dir = BASE_DIR / "Output" / "ReadyToSend"
+
+# Read the invited names
+with open(names_path, encoding="utf-8") as name_file:
     names = name_file.readlines()
-    print(names)
 
-with open("./Input/Letters/starting_letter.txt") as letter_file:
+# Read the starting letter
+with open(letter_path, encoding="utf-8") as letter_file:
     letter_content = letter_file.read()
-    for name in names:
-        stripped_name = name.strip()
+
+# Create a personalized letter for each person
+output_dir.mkdir(parents=True, exist_ok=True)
+
+for name in names:
+    stripped_name = name.strip()
+
+    if stripped_name:
         new_letter = letter_content.replace(PLACEHOLDER, stripped_name)
-        with open(f"./Output/ReadyToSend/letter _for_{stripped_name}.txt", mode="w") as completed_letter:
+
+        output_path = output_dir / f"letter_for_{stripped_name}.txt"
+
+        with open(output_path, "w", encoding="utf-8") as completed_letter:
             completed_letter.write(new_letter)
