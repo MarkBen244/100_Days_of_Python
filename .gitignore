@@ -5,3 +5,4 @@ __pycache__/
 *.pyc
 Higher_or_Lower.py
 .vscode
+high_score.txt
