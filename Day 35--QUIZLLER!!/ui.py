@@ -12,8 +12,8 @@ class QuizInterface():
         self.window.config(padx=20, pady=20, bg=THEME_COLOR)
 
         # ------------BUTTTONS-------------#
-        self.correct_logo = PhotoImage(file="Day 35--API/images/true.png")
-        self.false_logo = PhotoImage(file="Day 35--API/images/false.png")
+        self.correct_logo = PhotoImage(file="Day 35--QUIZLLER!!/images/true.png")
+        self.false_logo = PhotoImage(file="Day 35--QUIZLLER!!/images/false.png")
 
         self.correct_button = Button(
             image=self.correct_logo, highlightthickness=0, command=self.true_password)

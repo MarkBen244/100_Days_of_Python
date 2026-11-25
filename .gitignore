@@ -1,8 +1,9 @@
-sample.txt
+﻿sample.txt
 True.py
 Black_Jack_2nd.py
 __pycache__/
 *.pyc
 Higher_or_Lower.py
 .vscode
-high_score.txt
+.env
+**/.env
